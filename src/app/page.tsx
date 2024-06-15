@@ -68,6 +68,7 @@ export default function Home() {
     <main className="">
       <Navbar />
       <Hero />
+
       <div className="flex justify-center px-5 relative">
         <div className="w-full max-w-6xl">
           <Tabs />

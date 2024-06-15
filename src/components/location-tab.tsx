@@ -3,7 +3,7 @@ import { MdEdit, MdOutlineLocationOn } from "react-icons/md";
 import { IoInformationCircleOutline } from "react-icons/io5";
 const LocationTab = () => {
   return (
-    <div className="flex justify-center w-full">
+    <div className="flex justify-center w-full mt-5">
       <div className="w-full px-3">
         <div className="flex gap-2 items-center border-b-2 pb-2 w-full">
           <MdOutlineLocationOn size={26} />

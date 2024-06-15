@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
-
 const space_grostesk = Space_Grotesk({
   subsets: ["latin"],
   display: "swap",
