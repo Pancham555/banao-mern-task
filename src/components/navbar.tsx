@@ -75,8 +75,8 @@ const Navbar = () => {
             <DialogContent className="sm:max-w-4xl">
               <DialogHeader>
                 <div className="text-center text-sm text-green-800 font-medium">
-                  Let's learn, share & inspire each other with our passion for
-                  computer engineering. Sign up now 🤘🏼
+                  Let&apos;s learn, share & inspire each other with our passion
+                  for computer engineering. Sign up now 🤘🏼
                 </div>
               </DialogHeader>
               <div className="flex gap-2">
