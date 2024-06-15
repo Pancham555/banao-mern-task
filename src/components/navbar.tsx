@@ -26,7 +26,7 @@ const Navbar = () => {
         <div className="hidden md:block my-auto">
           <div className="my-auto font-medium cursor-pointer">
             <span>Create account.</span>{" "}
-            <span className="text-blue-500">It's Free!</span>
+            <span className="text-blue-500">It&apos;s Free!</span>
           </div>
         </div>
         <div className="md:hidden flex gap-5 items-center">
