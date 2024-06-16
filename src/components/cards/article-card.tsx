@@ -3,22 +3,23 @@ import React from "react";
 import { HiDotsHorizontal } from "react-icons/hi";
 import { IoMdShare } from "react-icons/io";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
-import { Popover, PopoverContent, PopoverTrigger } from "../ui/popover";
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "../ui/dropdown-menu";
 const Card = ({
   src,
+  usericon,
+  username,
   alt,
   emoji,
   tag,
 }: {
   src: string;
+  usericon: string;
+  username: string;
   alt: string;
   emoji?: string;
   tag?: string;
@@ -66,14 +67,14 @@ const Card = ({
           <div className="flex justify-between mt-4">
             <div className="items-center gap-5 flex">
               <Image
-                src={src}
+                src={usericon}
                 alt={alt}
                 width={40}
                 height={40}
-                className="md:w-11 md:h-11 w-14 h-14 rounded-full"
+                className="md:w-11 md:h-11 w-14 h-14 rounded-full object-cover"
               />
               <div className="">
-                <span className="font-medium">User Name</span>
+                <span className="font-medium">{username ?? "User Name"}</span>
                 <div className="items-center flex gap-2 md:hidden">
                   <span>1.4k views</span>
                 </div>

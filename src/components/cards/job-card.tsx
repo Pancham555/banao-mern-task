@@ -13,6 +13,8 @@ import {
 } from "../ui/dropdown-menu";
 const JobCard = ({
   src,
+  usericon,
+  username,
   alt,
   title,
   emoji,
@@ -20,6 +22,7 @@ const JobCard = ({
   img,
   date,
   location,
+  company,
   linkname,
   link,
 }: {
@@ -28,10 +31,13 @@ const JobCard = ({
   date?: string;
   location?: string;
   src: string;
+  usericon: string;
+  username: string;
   alt: string;
   emoji?: string;
   tag?: string;
   linkname?: string;
+  company?: string;
   link?: string;
 }) => {
   return (
@@ -65,7 +71,9 @@ const JobCard = ({
                   ) : (
                     <>
                       <PiSuitcaseSimpleDuotone size={22} />
-                      <span>Innovaccer Analytics Private Ltd.</span>
+                      <span>
+                        {company ?? "Innovaccer Analytics Private Ltd."}
+                      </span>
                     </>
                   )}
                 </div>
@@ -89,20 +97,20 @@ const JobCard = ({
               </DropdownMenu>
             </div>
           </div>
-          <div className="border rounded-md my-2 py-2 text-center font-medium text-slate-500 hover:text-green-500 border-slate-500 duration-200 hover:border-green-500 cursor-pointer">
+          <div className="border rounded-md my-2 py-2 text-center font-medium text-green-500 border-slate-500 duration-200 hover:border-green-500 cursor-pointer">
             {linkname ?? "Apply on TimeJobs"}
           </div>
           <div className="flex justify-between mt-4">
             <div className="items-center gap-5 flex">
               <Image
-                src={src}
+                src={usericon}
                 alt={alt}
                 width={40}
                 height={40}
-                className="md:w-11 md:h-11 w-14 h-14 rounded-full"
+                className="md:w-11 md:h-11 w-14 h-14 rounded-full object-cover"
               />
               <div className="">
-                <span className="font-medium">User Name</span>
+                <span className="font-medium">{username ?? "User Name"}</span>
                 <div className="items-center flex gap-2 md:hidden">
                   <span>1.4k views</span>
                 </div>

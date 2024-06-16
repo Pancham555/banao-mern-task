@@ -1,12 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, {
-  createContext,
-  Dispatch,
-  SetStateAction,
-  useEffect,
-  useState,
-} from "react";
+import React, { useEffect, useState } from "react";
 import { IoSearch } from "react-icons/io5";
 import { FaTimesCircle } from "react-icons/fa";
 import {
@@ -133,12 +127,11 @@ const Navbar = () => {
             <Drawer>
               <DrawerTrigger asChild>
                 <Image
-                  src="/assets/img1.jpg"
+                  src="/assets/hero.jpg"
                   alt="profile"
                   width={40}
                   height={40}
-                  className="w-8 h-8 rounded-full cursor-pointer"
-                  // onClick={() => setOpenModal(!openmodal)}
+                  className="w-8 h-8 rounded-full cursor-pointer object-cover"
                 />
               </DrawerTrigger>
 
@@ -172,11 +165,11 @@ const Navbar = () => {
             </Drawer>
           ) : (
             <Image
-              src="/assets/img1.jpg"
+              src="/assets/hero.jpg"
               alt="profile"
               width={40}
               height={40}
-              className="w-8 h-8 rounded-full cursor-pointer"
+              className="w-8 h-8 rounded-full cursor-pointer object-cover"
               onClick={() => setOpenModal(!openmodal)}
             />
           )}
