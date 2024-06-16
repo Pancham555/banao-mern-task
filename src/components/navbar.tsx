@@ -42,7 +42,7 @@ const Navbar = () => {
 
   return (
     <div className="flex justify-center px-5">
-      <div className="flex justify-between gap-5 shadow-sm py-3 md:py-2 w-full max-w-6xl">
+      <div className="flex justify-between gap-5 shadow-sm py-3 w-full max-w-6xl">
         <div className="flex">
           <Image
             src="/assets/logo-S2lIhR8K.svg"
@@ -58,7 +58,7 @@ const Navbar = () => {
             name=""
             id=""
             placeholder="Search your favourite groups in ATG"
-            className="text-lg outline-none bg-slate-200 w-[21rem]"
+            className="text-base outline-none bg-slate-200 w-[21rem]"
           />
         </div>
         <div className="hidden md:block my-auto">

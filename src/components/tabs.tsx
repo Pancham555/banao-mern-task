@@ -1,7 +1,13 @@
 import React from "react";
 import WritePost from "./buttons/write-post";
 import JoinGroup from "./buttons/join-group";
-import Filters from "./buttons/filters";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 const Tabs = () => {
   return (
@@ -31,7 +37,16 @@ const Tabs = () => {
           <JoinGroup />
         </div>
         <div className="md:hidden block">
-          <Filters />
+          <Select>
+            <SelectTrigger className="w-[180px]">
+              <SelectValue placeholder="Filter: All" />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="Option 1">Option 1</SelectItem>
+              <SelectItem value="Option 2">Option 2</SelectItem>
+              <SelectItem value="Option 3">Option 3</SelectItem>
+            </SelectContent>
+          </Select>
         </div>
       </div>
     </div>

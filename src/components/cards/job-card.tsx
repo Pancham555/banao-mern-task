@@ -5,6 +5,12 @@ import { IoMdShare } from "react-icons/io";
 import { MdOutlineRemoveRedEye, MdOutlineLocationOn } from "react-icons/md";
 import { PiSuitcaseSimpleDuotone } from "react-icons/pi";
 import { MdDateRange } from "react-icons/md";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "../ui/dropdown-menu";
 const JobCard = ({
   src,
   alt,
@@ -46,7 +52,7 @@ const JobCard = ({
           </p>
           <div className="my-2 flex justify-between gap-5 w-full">
             <div className="w-full">
-              <p className="text-lg md:text-2xl font-medium">
+              <p className="text-lg md:text-2xl font-semibold">
                 {title ?? "Software Developer"}
               </p>
               <div className="flex gap-5 mt-4 text-sm md:text-base">
@@ -71,7 +77,16 @@ const JobCard = ({
               </div>
             </div>
             <div className="">
-              <HiDotsHorizontal size={26} />
+              <DropdownMenu>
+                <DropdownMenuTrigger>
+                  <HiDotsHorizontal size={26} className="cursor-pointer" />
+                </DropdownMenuTrigger>
+                <DropdownMenuContent>
+                  <DropdownMenuItem>Edit</DropdownMenuItem>
+                  <DropdownMenuItem>Report</DropdownMenuItem>
+                  <DropdownMenuItem>Option 3</DropdownMenuItem>
+                </DropdownMenuContent>
+              </DropdownMenu>
             </div>
           </div>
           <div className="border rounded-md my-2 py-2 text-center font-medium text-slate-500 hover:text-green-500 border-slate-500 duration-200 hover:border-green-500 cursor-pointer">
@@ -84,22 +99,24 @@ const JobCard = ({
                 alt={alt}
                 width={40}
                 height={40}
-                className="w-11 h-11 rounded-full"
+                className="md:w-11 md:h-11 w-14 h-14 rounded-full"
               />
-              <span className="font-medium md:text-base text-sm">
-                User Name
-              </span>
+              <div className="">
+                <span className="font-medium">User Name</span>
+                <div className="items-center flex gap-2 md:hidden">
+                  <span>1.4k views</span>
+                </div>
+              </div>
             </div>
             <div className="gap-5 flex justify-between">
-              <div className="items-center flex gap-2">
+              <div className="items-center md:flex gap-2 hidden">
                 <MdOutlineRemoveRedEye size={22} />
-                <span className="md:text-base text-sm">1.4k views</span>
+                <span>1.4k views</span>
               </div>
-
-              <IoMdShare
-                size={36}
-                className="bg-slate-200 p-2 rounded my-auto cursor-pointer"
-              />
+              <div className="flex items-center gap-2 bg-slate-200 p-2 rounded my-auto cursor-pointer">
+                <IoMdShare size={22} className="" />
+                <span className="pr-2 md:hidden block font-medium">Share</span>
+              </div>
             </div>
           </div>
         </div>
