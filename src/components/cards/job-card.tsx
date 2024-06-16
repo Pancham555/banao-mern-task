@@ -76,7 +76,7 @@ const JobCard = ({
                 <div className=""></div>
               </div>
             </div>
-            <div className="">
+            <div className="relative">
               <DropdownMenu>
                 <DropdownMenuTrigger>
                   <HiDotsHorizontal size={26} className="cursor-pointer" />

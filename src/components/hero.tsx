@@ -5,13 +5,13 @@ import Leave from "./buttons/leave";
 const Hero = () => {
   return (
     <div className="w-full h-auto">
-      <div className="w-full h-[26rem] relative">
+      <div className="w-full h-[26rem] relative bg-black">
         <Image
           src="/assets/hero.jpg"
           alt="logo"
           width={1500}
           height={800}
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-85"
         />
         <div className="md:hidden block absolute top-5 left-0 right-0">
           <Leave />

@@ -50,7 +50,7 @@ const Card = ({
                 dolore, ratione veniam rem nemo nostrum laborum magnam.
               </div>
             </div>
-            <div className="">
+            <div className="relative">
               <DropdownMenu>
                 <DropdownMenuTrigger>
                   <HiDotsHorizontal size={26} className="cursor-pointer" />
