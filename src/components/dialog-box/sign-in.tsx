@@ -51,6 +51,7 @@ const SignIn = ({
               alt="google"
               className="w-5 h-5"
             />
+            <span>Sign in with Google</span>
           </button>
           <button className="py-3 px-4 border-2  rounded-md font-medium flex justify-center gap-2 items-center">
             <Image
